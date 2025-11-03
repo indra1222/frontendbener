@@ -1,0 +1,140 @@
+/* ==========================================================
+   VIRTUAL TOUR PAGE STYLES
+   ========================================================== */
+
+.virtual-tour-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a0a0a 0%, #050505 100%);
+  color: #ffffff;
+  padding: 6rem 2rem 3rem;
+}
+
+.virtual-tour-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.virtual-tour-header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.virtual-tour-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.virtual-tour-description {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Player Section */
+.virtual-tour-player-section {
+  margin-bottom: 3rem;
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Info Cards */
+.virtual-tour-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.info-card p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.info-card p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .virtual-tour-page {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .virtual-tour-title {
+    font-size: 2.5rem;
+  }
+
+  .virtual-tour-description {
+    font-size: 1rem;
+  }
+
+  .virtual-tour-info {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .virtual-tour-title {
+    font-size: 2rem;
+  }
+
+  .virtual-tour-description {
+    font-size: 0.9rem;
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .info-card p {
+    font-size: 0.85rem;
+  }
+}
